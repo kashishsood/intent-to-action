@@ -1,0 +1,22 @@
+{
+  "description": "Baseline closed-loop task success rates and quality gate thresholds for MT10 Behavior Cloning",
+  "max_allowed_drop_percentage_points": 10.0,
+  "episodes_per_task": 50,
+  "tasks": {
+    "reach-v3": {
+      "baseline_success_rate": 58.0
+    },
+    "pick-place-v3": {
+      "baseline_success_rate": 26.0
+    },
+    "door-open-v3": {
+      "baseline_success_rate": 100.0
+    },
+    "drawer-open-v3": {
+      "baseline_success_rate": 100.0
+    },
+    "button-press-topdown-v3": {
+      "baseline_success_rate": 100.0
+    }
+  }
+}

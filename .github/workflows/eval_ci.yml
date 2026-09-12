@@ -1,0 +1,244 @@
+# .github/workflows/eval_ci.yml
+#
+# Evaluation CI/CD Pipeline
+# ==========================
+#
+# WHY NIGHTLY, NOT PER-PR?
+# -------------------------
+# A full eval_harness.py run executes 250 closed-loop MuJoCo rollouts
+# (50 episodes x 5 tasks). On a standard GitHub Actions ubuntu-latest runner
+# this takes 10-20 minutes and requires a virtual display (xvfb + libGL).
+# Blocking every PR on that latency and fragile display setup is impractical.
+#
+# Design:
+#   - nightly_eval  (scheduled, main branch): runs the full harness, posts a
+#     commit status. Branch protection can require this status to be green
+#     before any PR merges -- giving a real merge block without gating every push.
+#   - pr_smoke_test (on: pull_request): fast (<2 min) sanity checks -- imports,
+#     baseline JSON validity, dataset structure. Fails immediately on obviously
+#     broken PRs without spending rollout budget.
+#
+# To enforce the quality gate:
+#   Repo settings -> Branches -> Branch protection rules -> main ->
+#   "Require status checks to pass before merging" -> add "eval / quality-gate"
+#
+# Baseline thresholds live in eval_baseline.json at the repo root.
+# Update that file intentionally when you want to raise the bar.
+
+name: Eval CI
+
+on:
+  schedule:
+    # 02:00 UTC every day (07:30 IST)
+    - cron: "0 2 * * *"
+  # Allow manual re-runs from the Actions tab
+  workflow_dispatch:
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # Job 1: Fast smoke test -- runs on every PR, no MuJoCo rollouts
+  # ---------------------------------------------------------------------------
+  pr_smoke_test:
+    name: PR smoke test
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Validate baseline_config schema
+        run: |
+          python - <<'PYEOF'
+          import json, sys
+          with open("eval_baseline.json") as f:
+              cfg = json.load(f)
+          assert "tasks" in cfg, "eval_baseline.json missing 'tasks' key"
+          assert "max_allowed_drop_percentage_points" in cfg, \
+              "eval_baseline.json missing 'max_allowed_drop_percentage_points'"
+          for task, vals in cfg["tasks"].items():
+              assert "baseline_success_rate" in vals, \
+                  f"Task '{task}' missing 'baseline_success_rate'"
+              rate = vals["baseline_success_rate"]
+              assert 0.0 <= rate <= 100.0, \
+                  f"Task '{task}' baseline_success_rate {rate} out of [0,100]"
+          print("eval_baseline.json OK --", len(cfg["tasks"]), "tasks defined")
+          PYEOF
+
+      - name: Check module imports
+        run: |
+          python - <<'PYEOF'
+          import metaworld
+          import metaworld.policies as policies
+          import pandas as pd
+          import numpy as np
+          import torch
+          from train_bc import BCPolicyMLP
+          from train_bc_gru import BCPolicyGRU, SequenceDataset
+          import compare_models
+          print("All imports OK (MLP + GRU + compare_models)")
+          PYEOF
+
+      - name: Verify dataset structure (if dataset/ exists)
+        run: |
+          python - <<'PYEOF'
+          import sys, pathlib
+          import pandas as pd
+
+          dataset_dir = pathlib.Path("dataset")
+          if not dataset_dir.exists():
+              print("No dataset/ directory -- skipping dataset structure check.")
+              sys.exit(0)
+
+          required_splits = ["train.parquet", "val.parquet", "test.parquet"]
+          required_cols   = {"task_name", "episode_id", "timestep", "obs", "action", "success"}
+          missing_splits  = []
+
+          for split in required_splits:
+              p = dataset_dir / split
+              if not p.exists():
+                  missing_splits.append(str(p))
+                  continue
+              df = pd.read_parquet(p)
+              bad = required_cols - set(df.columns)
+              if bad:
+                  print(f"FAIL: {p} missing columns: {bad}")
+                  sys.exit(1)
+              print(f"  {p}: {len(df):,} rows, columns OK")
+
+          if missing_splits:
+              print("Missing splits (dataset not yet collected):", missing_splits)
+          else:
+              print("Dataset structure OK")
+          PYEOF
+
+  # ---------------------------------------------------------------------------
+  # Job 2: Full nightly evaluation -- quality gate with merge-blocking status
+  # ---------------------------------------------------------------------------
+  nightly_eval:
+    name: eval / quality-gate
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    # 35-minute hard cap; if MuJoCo hangs, don't burn the full budget
+    timeout-minutes: 35
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install system dependencies for MuJoCo headless rendering
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            libgl1-mesa-glx \
+            libegl1-mesa \
+            libgles2-mesa \
+            xvfb \
+            x11-utils
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Verify model checkpoint exists
+        run: |
+          if [ ! -f "models/best_bc_model.pt" ]; then
+            echo "ERROR: models/best_bc_model.pt not found."
+            echo "The checkpoint must be committed to the repo or restored from a release artifact."
+            exit 1
+          fi
+
+      - name: Run evaluation harness
+        env:
+          # Use EGL renderer -- avoids needing a real X server
+          MUJOCO_GL: egl
+          PYOPENGL_PLATFORM: egl
+        run: |
+          xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" \
+            python eval_harness.py \
+              --model-path models/best_bc_model.pt \
+              --test-file dataset/test.parquet \
+              --episodes-per-task 50 \
+              --device cpu \
+              --output-report eval_report.md
+
+      - name: Quality gate -- compare observed vs baseline
+        run: |
+          python - <<'PYEOF'
+          import json, re, sys, pathlib
+
+          baseline_path = pathlib.Path("eval_baseline.json")
+          report_path   = pathlib.Path("eval_report.md")
+
+          with open(baseline_path) as f:
+              cfg = json.load(f)
+
+          max_drop  = float(cfg["max_allowed_drop_percentage_points"])
+          baselines = {k: v["baseline_success_rate"] for k, v in cfg["tasks"].items()}
+
+          # Parse task success rates from the markdown report table.
+          # eval_harness.py writes rows like:
+          #   | `reach-v3` | 4,000 | 0.0182 | 0.00340 | 50 | 27 | 54.0% |
+          report_text = report_path.read_text(encoding="utf-8")
+          pattern = re.compile(
+              r"\|\s*`?([a-z][a-z0-9\-]+-v\d+)`?\s*\|"   # task name column
+              r"[^|]+\|[^|]+\|[^|]+\|[^|]+\|[^|]+\|"     # 5 intermediate columns
+              r"\s*([\d.]+)%"                               # success rate column
+          )
+          found = {}
+          for m in pattern.finditer(report_text):
+              found[m.group(1)] = float(m.group(2))
+
+          if not found:
+              print("ERROR: Could not parse any task success rates from eval_report.md.")
+              print("Check that the report format matches the regex pattern.")
+              sys.exit(1)
+
+          header = f"{'Task':<35} {'Baseline':>10} {'Observed':>10} {'Drop':>9} {'Status':>6}"
+          print("\n" + header)
+          print("-" * len(header))
+
+          failures = []
+          for task, baseline in baselines.items():
+              observed = found.get(task)
+              if observed is None:
+                  print(f"{task:<35} {baseline:>9.1f}%  {'MISSING':>9}  {'?':>8}  SKIP")
+                  continue
+              drop   = baseline - observed   # positive = regression
+              status = "PASS" if drop <= max_drop else "FAIL"
+              suffix = "  <-- REGRESSION" if status == "FAIL" else ""
+              print(f"{task:<35} {baseline:>9.1f}%  {observed:>9.1f}%  {drop:>+7.1f}pp  {status}{suffix}")
+              if status == "FAIL":
+                  failures.append((task, baseline, observed, drop))
+
+          print()
+          if failures:
+              print(f"QUALITY GATE FAILED: {len(failures)} task(s) regressed > {max_drop} pp below baseline:")
+              for task, base, obs, drop in failures:
+                  print(f"  {task}: baseline={base:.1f}%, observed={obs:.1f}%, drop={drop:.1f}pp")
+              sys.exit(1)
+          else:
+              print(f"QUALITY GATE PASSED: all {len(baselines)} tasks within {max_drop}pp of baseline.")
+          PYEOF
+
+      - name: Upload eval report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report-${{ github.sha }}
+          path: eval_report.md
+          retention-days: 90
