@@ -1,28 +1,25 @@
-# IoA Pred — Behavior Cloning on Meta-World Manipulation Tasks
+# intent-to-action — Behavior Cloning on Meta-World Manipulation Tasks
 
-[![Eval CI](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/actions/workflows/eval_ci.yml/badge.svg)](https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>/actions/workflows/eval_ci.yml)
-
-> **Replace** `<YOUR_GITHUB_USERNAME>/<YOUR_REPO_NAME>` with your actual GitHub path before pushing.
+[![Eval CI](https://github.com/kashishsood/intent-to-action/actions/workflows/eval_ci.yml/badge.svg)](https://github.com/kashishsood/intent-to-action/actions/workflows/eval_ci.yml)
 
 ---
 
 ## Key Finding
 
 **Step-wise prediction accuracy does not predict closed-loop task success.**
-`pick-place-v3` had the second-lowest offline MAE (0.024) of all five tasks — placing it
-in the best half by imitation accuracy — yet the worst closed-loop success rate (24%).
+`pick-place-v3` had the second-lowest offline MAE (0.024) of all five tasks — placing it in the best half by imitation accuracy — yet the worst closed-loop success rate (16%).
 Three tasks with substantially higher MAE achieved 100% success.
 
 | Task | Step-wise MAE | Step-wise MSE | Task Success |
 |:---|:---:|:---:|:---:|
-| `reach-v3` | 0.0182 | 0.00340 | 54.0% |
-| `pick-place-v3` | **0.0240** | 0.00934 | **24.0%** ← flagged |
+| `reach-v3` | 0.0182 | 0.00340 | **58.0%** |
+| `pick-place-v3` | **0.0240** | 0.00934 | **16.0%** ← flagged |
 | `door-open-v3` | 0.2943 | 0.45446 | 100.0% |
 | `drawer-open-v3` | 0.1392 | 0.08916 | 100.0% |
 | `button-press-topdown-v3` | 0.1717 | 1.06559 | 100.0% |
-| **Overall** | **0.1295** | **0.32439** | **75.6%** |
+| **Overall** | **0.1295** | **0.32439** | **74.8%** |
 
-*50 closed-loop rollouts per task (250 total), model checkpoint `models/best_bc_model.pt`, CPU, 2026-09-11.*
+*50 closed-loop rollouts per task (250 total), model checkpoint `models/best_bc_model.pt`, CPU, 2026-09-12.*
 
 The most plausible explanation — consistent with the data but not definitively isolated —
 is that tasks requiring precise contact (grasp, placement) are more sensitive to
