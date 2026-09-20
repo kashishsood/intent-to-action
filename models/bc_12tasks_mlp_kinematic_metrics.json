@@ -1,0 +1,17 @@
+{
+  "model_name": "bc_12tasks_mlp_kinematic",
+  "arch_type": "mlp",
+  "feature_key": "obs",
+  "obs_dim": 39,
+  "act_dim": 4,
+  "hidden_dim": 256,
+  "history_len": 1,
+  "param_count": 110724,
+  "epochs": 20,
+  "best_epoch": 19,
+  "best_val_loss": 0.6916966600971562,
+  "best_val_mae": 0.18392714420954387,
+  "test_loss": 3.238746173446377,
+  "test_mae": 0.277847845941782,
+  "total_time_seconds": 111.65273880958557
+}

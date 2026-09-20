@@ -1,0 +1,17 @@
+{
+  "model_name": "bc_12tasks_gru_kinematic",
+  "arch_type": "gru",
+  "feature_key": "obs",
+  "obs_dim": 39,
+  "act_dim": 4,
+  "hidden_dim": 256,
+  "history_len": 8,
+  "param_count": 439172,
+  "epochs": 20,
+  "best_epoch": 19,
+  "best_val_loss": 0.6932005957201833,
+  "best_val_mae": 0.18226054952825818,
+  "test_loss": 3.2446494519791256,
+  "test_mae": 0.2782875869671504,
+  "total_time_seconds": 631.7574441432953
+}

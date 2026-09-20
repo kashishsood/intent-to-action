@@ -1,0 +1,17 @@
+{
+  "model_name": "bc_12tasks_gru_force",
+  "arch_type": "gru",
+  "feature_key": "obs_force",
+  "obs_dim": 45,
+  "act_dim": 4,
+  "hidden_dim": 256,
+  "history_len": 8,
+  "param_count": 440708,
+  "epochs": 20,
+  "best_epoch": 20,
+  "best_val_loss": 0.6915573645553419,
+  "best_val_mae": 0.17921900592531476,
+  "test_loss": 3.252206855647887,
+  "test_mae": 0.2743033013045788,
+  "total_time_seconds": 634.4542334079742
+}

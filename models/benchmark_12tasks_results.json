@@ -1,0 +1,224 @@
+{
+  "12-Task Kinematic MLP": {
+    "pick-place-v3": {
+      "successes": 3,
+      "episodes": 20,
+      "success_rate": 15.0,
+      "mean_reward": 323.00055776398017
+    },
+    "pick-place-wall-v3": {
+      "successes": 11,
+      "episodes": 20,
+      "success_rate": 55.00000000000001,
+      "mean_reward": 1654.092712416453
+    },
+    "peg-insert-side-v3": {
+      "successes": 18,
+      "episodes": 20,
+      "success_rate": 90.0,
+      "mean_reward": 3513.302818445536
+    },
+    "assembly-v3": {
+      "successes": 17,
+      "episodes": 20,
+      "success_rate": 85.0,
+      "mean_reward": 3818.0549826564684
+    },
+    "hammer-v3": {
+      "successes": 19,
+      "episodes": 20,
+      "success_rate": 95.0,
+      "mean_reward": 1578.601465603704
+    },
+    "sweep-into-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 1512.085532186739
+    },
+    "reach-v3": {
+      "successes": 13,
+      "episodes": 20,
+      "success_rate": 65.0,
+      "mean_reward": 3963.531062355454
+    },
+    "door-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 4494.770038899951
+    },
+    "drawer-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 4024.6758122478554
+    },
+    "button-press-topdown-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3799.0109284985074
+    },
+    "drawer-close-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 4273.921984381951
+    },
+    "door-close-v3": {
+      "successes": 19,
+      "episodes": 20,
+      "success_rate": 95.0,
+      "mean_reward": 3669.6775949658063
+    }
+  },
+  "12-Task Kinematic GRU": {
+    "pick-place-v3": {
+      "successes": 0,
+      "episodes": 20,
+      "success_rate": 0.0,
+      "mean_reward": 91.28721669699672
+    },
+    "pick-place-wall-v3": {
+      "successes": 0,
+      "episodes": 20,
+      "success_rate": 0.0,
+      "mean_reward": 946.3002209196153
+    },
+    "peg-insert-side-v3": {
+      "successes": 1,
+      "episodes": 20,
+      "success_rate": 5.0,
+      "mean_reward": 360.232598212782
+    },
+    "assembly-v3": {
+      "successes": 0,
+      "episodes": 20,
+      "success_rate": 0.0,
+      "mean_reward": 342.53504182189636
+    },
+    "hammer-v3": {
+      "successes": 12,
+      "episodes": 20,
+      "success_rate": 60.0,
+      "mean_reward": 800.1172335006511
+    },
+    "sweep-into-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 2138.8067308702566
+    },
+    "reach-v3": {
+      "successes": 4,
+      "episodes": 20,
+      "success_rate": 20.0,
+      "mean_reward": 1800.3997327373522
+    },
+    "door-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 4461.198304749754
+    },
+    "drawer-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3859.6587226680504
+    },
+    "button-press-topdown-v3": {
+      "successes": 13,
+      "episodes": 20,
+      "success_rate": 65.0,
+      "mean_reward": 1759.5472706334997
+    },
+    "drawer-close-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3734.265335652527
+    },
+    "door-close-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3387.9286885433235
+    }
+  },
+  "12-Task Force GRU": {
+    "pick-place-v3": {
+      "successes": 9,
+      "episodes": 20,
+      "success_rate": 45.0,
+      "mean_reward": 429.71721549863577
+    },
+    "pick-place-wall-v3": {
+      "successes": 15,
+      "episodes": 20,
+      "success_rate": 75.0,
+      "mean_reward": 1697.06443148123
+    },
+    "peg-insert-side-v3": {
+      "successes": 0,
+      "episodes": 20,
+      "success_rate": 0.0,
+      "mean_reward": 347.7724785776396
+    },
+    "assembly-v3": {
+      "successes": 0,
+      "episodes": 20,
+      "success_rate": 0.0,
+      "mean_reward": 338.7751645209128
+    },
+    "hammer-v3": {
+      "successes": 18,
+      "episodes": 20,
+      "success_rate": 90.0,
+      "mean_reward": 1154.0857854080318
+    },
+    "sweep-into-v3": {
+      "successes": 18,
+      "episodes": 20,
+      "success_rate": 90.0,
+      "mean_reward": 855.4813004466199
+    },
+    "reach-v3": {
+      "successes": 5,
+      "episodes": 20,
+      "success_rate": 25.0,
+      "mean_reward": 1960.9432429208741
+    },
+    "door-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3753.5521710290463
+    },
+    "drawer-open-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 1915.8949768005355
+    },
+    "button-press-topdown-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 2266.3535954723843
+    },
+    "drawer-close-v3": {
+      "successes": 20,
+      "episodes": 20,
+      "success_rate": 100.0,
+      "mean_reward": 3960.825741580925
+    },
+    "door-close-v3": {
+      "successes": 12,
+      "episodes": 20,
+      "success_rate": 60.0,
+      "mean_reward": 2428.9305829107907
+    }
+  }
+}
