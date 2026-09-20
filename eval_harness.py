@@ -99,30 +99,41 @@ def run_closed_loop_rollouts(
     max_steps: int,
     device: torch.device,
     seed: int,
+    return_trajectories: bool = False,
 ) -> Dict[str, Dict[str, float]]:
     """
     Runs closed-loop simulation rollouts in Meta-World across all tasks.
+    If return_trajectories is True, also returns a dict mapping each task name to a dict
+    containing a list of action trajectories (list of np.ndarray) for each episode.
     """
     mt10 = metaworld.MT10()
     results = {}
+    trajectories = {} if return_trajectories else None
 
     print(f"\nRunning closed-loop simulation rollouts ({episodes_per_task} episodes/task)...")
 
     for task_id, task_name in enumerate(TASK_NAMES):
         env_cls = mt10.train_classes[task_name]
-        env = env_cls()
         tasks = [t for t in mt10.train_tasks if t.env_name == task_name]
 
         success_count = 0
         rewards = []
         lengths = []
+        task_actions = [] if return_trajectories else None
 
         desc = f"  [{task_id + 1}/{len(TASK_NAMES)}] {task_name}"
         for ep_idx in tqdm(range(episodes_per_task), desc=desc, unit="ep"):
+            env = env_cls()  # fresh env for each episode to avoid RNG leakage
             env.set_task(tasks[ep_idx % len(tasks)])
-            obs, info = env.reset(seed=seed + ep_idx * 17)
+            ep_seed = seed + ep_idx * 17
+            torch.manual_seed(ep_seed)
+            np.random.seed(ep_seed)
+            obs, info = env.reset(seed=ep_seed)
             ep_reward = 0.0
             ep_success = False
+            episode_actions = []
+            # Log episode information (task, episode index, seed, success) after the episode ends
+            # We'll compute success after the rollout loop and print here.
 
             for step in range(max_steps):
                 norm_obs = (obs - obs_mean) / obs_std
@@ -130,6 +141,10 @@ def run_closed_loop_rollouts(
 
                 with torch.no_grad():
                     action = model(obs_t).squeeze(0).cpu().numpy()
+
+                # Record action if needed
+                if return_trajectories:
+                    episode_actions.append(action.copy())
 
                 obs, reward, terminated, truncated, step_info = env.step(action)
                 ep_reward += float(reward)
@@ -142,8 +157,16 @@ def run_closed_loop_rollouts(
 
             if ep_success:
                 success_count += 1
+                # Log per‑episode outcome (success)
+                print(f"[EP_LOG] Task {task_name} Episode {ep_idx} Seed {seed + ep_idx * 17} Success {ep_success}")
+            else:
+                # Log per‑episode outcome (failure) – do NOT increment success_count
+                print(f"[EP_LOG] Task {task_name} Episode {ep_idx} Seed {seed + ep_idx * 17} Success {ep_success}")
+            # (no increment on failure)
             rewards.append(ep_reward)
             lengths.append(step + 1)
+            if return_trajectories:
+                task_actions.append(np.stack(episode_actions))
 
         succ_rate = (success_count / episodes_per_task) * 100.0
         results[task_name] = {
@@ -153,7 +176,11 @@ def run_closed_loop_rollouts(
             "mean_reward": float(np.mean(rewards)),
             "mean_steps": float(np.mean(lengths)),
         }
+        if return_trajectories:
+            trajectories[task_name] = {"actions": task_actions}
 
+    if return_trajectories:
+        return {"metrics": results, "trajectories": trajectories}
     return results
 
 
@@ -325,7 +352,17 @@ def main():
     )
     parser.add_argument("--device", type=str, default="cpu", help="Compute device ('cpu' or 'cuda').")
     parser.add_argument("--seed", type=int, default=2026, help="Random seed for reproducibility.")
+    parser.add_argument("--repro-episodes", type=int, default=None, help="Limit number of episodes compared in reproducibility test (default: all).")
+    parser.add_argument("--test-repro", action="store_true", help="Run reproducibility test: execute rollouts twice with same seed and compare trajectories.")
+    parser.add_argument("--test-repro-single", action="store_true", help="Run reproducibility test in isolated subprocesses to avoid in-process RNG leakage.")
+    parser.add_argument("--task", type=str, default=None, help="Specific task name to evaluate (default: all MT10 tasks).")
+    parser.add_argument("--repro-run", action="store_true", help=argparse.SUPPRESS)
+    parser.add_argument("--output", type=str, default=None, help=argparse.SUPPRESS)
     args = parser.parse_args()
+
+    global TASK_NAMES
+    if args.task:
+        TASK_NAMES = [args.task]
 
     print("\n" + "=" * 80)
     print("      BEHAVIOR CLONING EVALUATION HARNESS (eval_harness.py)")
@@ -370,6 +407,126 @@ def main():
         seed=args.seed,
     )
 
+    # Optional reproducibility test
+    if args.test_repro:
+        print("\nRunning reproducibility test (two runs with same seed)...")
+        # First run
+        trajs1 = run_closed_loop_rollouts(
+            model=model,
+            obs_mean=obs_mean,
+            obs_std=obs_std,
+            episodes_per_task=args.episodes_per_task,
+            max_steps=args.max_steps,
+            device=device,
+            seed=args.seed,
+            return_trajectories=True,
+        )
+        # Second run
+        trajs2 = run_closed_loop_rollouts(
+            model=model,
+            obs_mean=obs_mean,
+            obs_std=obs_std,
+            episodes_per_task=args.episodes_per_task,
+            max_steps=args.max_steps,
+            device=device,
+            seed=args.seed,
+            return_trajectories=True,
+        )
+        # Compare per task
+        for task_name in TASK_NAMES:
+            actions1 = trajs1["trajectories"][task_name]["actions"]
+            actions2 = trajs2["trajectories"][task_name]["actions"]
+            n_eps = args.repro_episodes if args.repro_episodes is not None else len(actions1)
+            for ep_idx in range(n_eps):
+                seed_used = args.seed + ep_idx * 17
+                # Compare trajectories for this episode
+                arr1 = np.array(actions1[ep_idx])
+                arr2 = np.array(actions2[ep_idx])
+                if np.array_equal(arr1, arr2):
+                    result = 'exactly equal'
+                    diff_step = 'N/A'
+                elif np.allclose(arr1, arr2, atol=1e-6):
+                    result = 'numerically close (<=1e-6)'
+                    diff_step = 'N/A'
+                else:
+                    if arr1.shape != arr2.shape:
+                        min_len = min(len(arr1), len(arr2))
+                        per_step_equal = np.isclose(arr1[:min_len], arr2[:min_len], atol=1e-6).all(axis=1)
+                        diff_idxs = np.where(~per_step_equal)[0]
+                        diff_step = diff_idxs[0] if diff_idxs.size > 0 else f"length mismatch ({len(arr1)} vs {len(arr2)})"
+                    else:
+                        per_step_equal = np.isclose(arr1, arr2, atol=1e-6).all(axis=1)
+                        diff_idxs = np.where(~per_step_equal)[0]
+                        diff_step = diff_idxs[0] if diff_idxs.size > 0 else 'N/A'
+                    result = 'different'
+                print(f"[REPRO] Task {task_name:<20} Episode {ep_idx+1:2d} Seed {seed_used:5d}: {result}; First divergence step: {diff_step}")
+
+
+    if args.test_repro_single:
+        import subprocess, tempfile
+        print("\nRunning reproducibility test in isolated subprocesses (two independent runs)...")
+        eps = args.repro_episodes if args.repro_episodes is not None else args.episodes_per_task
+        # Temporary files to store trajectories
+        tmp1 = tempfile.NamedTemporaryFile(delete=False, suffix=".npz")
+        tmp2 = tempfile.NamedTemporaryFile(delete=False, suffix=".npz")
+        tmp1_path = tmp1.name
+        tmp2_path = tmp2.name
+        tmp1.close()
+        tmp2.close()
+        base_cmd = [
+            sys.executable, sys.argv[0],
+            "--model-path", args.model_path,
+            "--test-file", args.test_file,
+            "--episodes-per-task", str(eps),
+            "--max-steps", str(args.max_steps),
+            "--device", args.device,
+            "--seed", str(args.seed),
+            "--repro-run",
+            "--output", ""
+        ]
+        if args.task:
+            base_cmd.extend(["--task", args.task])
+        # First subprocess
+        cmd1 = base_cmd.copy()
+        cmd1[-1] = tmp1_path
+        subprocess.run(cmd1, check=True)
+        # Second subprocess
+        cmd2 = base_cmd.copy()
+        cmd2[-1] = tmp2_path
+        subprocess.run(cmd2, check=True)
+        # Load trajectories saved by subprocesses
+        trajs1 = np.load(tmp1_path, allow_pickle=True)['trajectories'].item()
+        trajs2 = np.load(tmp2_path, allow_pickle=True)['trajectories'].item()
+        for task_name in TASK_NAMES:
+            actions1 = trajs1[task_name]["actions"]
+            actions2 = trajs2[task_name]["actions"]
+            n_eps = eps
+            for ep_idx in range(n_eps):
+                seed_used = args.seed + ep_idx * 17
+                arr1 = np.array(actions1[ep_idx])
+                arr2 = np.array(actions2[ep_idx])
+                equal = np.array_equal(arr1, arr2)
+                close = np.allclose(arr1, arr2, atol=1e-6)
+                if equal:
+                    result = "exactly equal"
+                    diff = "N/A"
+                elif close:
+                    result = "numerically close (≤1e-6)"
+                    diff = "N/A"
+                else:
+                    if arr1.shape != arr2.shape:
+                        min_len = min(len(arr1), len(arr2))
+                        per_step_equal = np.isclose(arr1[:min_len], arr2[:min_len], atol=1e-6).all(axis=1)
+                        diff_idxs = np.where(~per_step_equal)[0]
+                        diff_step = diff_idxs[0] if diff_idxs.size > 0 else f"length mismatch ({len(arr1)} vs {len(arr2)})"
+                    else:
+                        per_step_equal = np.isclose(arr1, arr2, atol=1e-6).all(axis=1)
+                        diff_idxs = np.where(~per_step_equal)[0]
+                        diff_step = diff_idxs[0] if diff_idxs.size > 0 else 'N/A'
+                    result = 'different'
+                print(f"[REPRO] Task {task_name:<20} Episode {ep_idx+1:2d} Seed {seed_used:5d}: {result}; First divergence step: {diff_step}")
+        os.remove(tmp1_path)
+        os.remove(tmp2_path)
     # Combine metrics per task
     combined_results = []
     total_test_steps = 0
