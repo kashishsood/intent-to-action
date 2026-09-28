@@ -98,6 +98,7 @@ def evaluate_model_on_12tasks(
         tasks = [t for t in mt50.train_tasks if t.env_name == task_name]
         succ_count = 0
         rewards = []
+        episode_details = []
 
         for ep_i in range(episodes_per_task):
             task_obj = tasks[ep_i % len(tasks)]
@@ -143,6 +144,12 @@ def evaluate_model_on_12tasks(
             if ep_succ:
                 succ_count += 1
             rewards.append(ep_rew)
+            episode_details.append({
+                "ep": ep_i,
+                "seed": ep_seed,
+                "succ": bool(ep_succ),
+                "rew": round(float(ep_rew), 2)
+            })
 
         succ_rate = (succ_count / episodes_per_task) * 100.0
         mean_rew = float(np.mean(rewards))
@@ -151,6 +158,7 @@ def evaluate_model_on_12tasks(
             "episodes": episodes_per_task,
             "success_rate": succ_rate,
             "mean_reward": mean_rew,
+            "episode_details": episode_details,
         }
         print(f"  [{t_idx+1:02d}/12] {task_name:<25}: {succ_count}/{episodes_per_task} ({succ_rate:.1f}%) | Mean Reward: {mean_rew:.1f}")
 
@@ -172,7 +180,7 @@ def main():
     print("=" * 100)
 
     device = torch.device("cpu")
-    mt50 = metaworld.MT50()
+    mt50 = metaworld.MT50(seed=args.seed)
 
     models = [
         ("12-Task Kinematic MLP", "models/bc_12tasks_mlp_kinematic.pt"),

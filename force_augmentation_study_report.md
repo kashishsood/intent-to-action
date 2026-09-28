@@ -25,9 +25,10 @@ Adding a 6-D genuine contact wrench ($F_x, F_y, F_z, \tau_x, \tau_y, \tau_z$) to
   - **Hard Pose Resolution**: **3 out of the 6 historically unsolvable poses (#00, #20, #47) were completely flipped from 0.0% to 100.0% success**.
   - **Zero Stochastic Variance**: Every single pose across all random seeds evaluated to strictly 100% or 0% (5/5 or 0/5).
   - **Verified Reproducibility**: A full rerun from scratch across all 240 episodes reproduced **100.0% identically down to the step count and boolean success** (30/60, 15/60, 0/60, 30/60).
-- **On the 12-Task Multi-Task Benchmark (240 Rollouts per Model)**:
-  - On **True Contact Manipulation Tasks** (`pick-place`, `pick-place-wall`, `assembly`, `sweep-into`), Force GRU achieved **52.5% success**, more than **doubling** Kinematic GRU (**25.0%**).
-  - On `pick-place-wall-v3`: Kinematic GRU scored 0.0%, Kinematic MLP scored 55.0%, while Force GRU reached **75.0% (+75% absolute gain vs Kinematic GRU)**.
+- **On the 12-Task Multi-Task Benchmark (Locked `MT50(seed=42)`, 240 Rollouts per Model)**:
+  - On **True Contact Manipulation Tasks** (`pick-place`, `pick-place-wall`, `assembly`, `sweep-into`), Force GRU achieved **41.2% success** (33/80), significantly outperforming Kinematic GRU (**25.0%**, 20/80; $+16.2\%$ gain [90% CI: $+4.2\%, +28.3\%$]).
+  - On `pick-place-wall-v3`: Kinematic GRU scored 0.0%, Kinematic MLP scored 70.0%, while Force GRU reached **65.0% (+65.0% gain vs Kinematic GRU [90% CI: $+47.5\%, +82.5\%$])**.
+  - Across the full 12-task benchmark (240 rollouts), Force GRU achieved **64.2%** (154/240) vs Kinematic GRU **52.1%** (125/240), an overall net gain of **+12.1% [90% CI: $+4.7\%, +19.4\%$]**.
 
 ---
 
@@ -100,31 +101,33 @@ Crucially, the 12 tasks partition into distinct physical interaction categories:
 2. **Constrained Mechanism / Hardstop Holding (7 tasks)**: `door-open-v3`, `drawer-open-v3`, `button-press-topdown-v3`, `drawer-close-v3`, `door-close-v3`, `peg-insert-side-v3`, `hammer-v3`. Success is determined by kinematic alignment with a fixed track; post-success behavior is dominated by pushing against rigid stops (800 N – 2300 N).
 3. **Free-Space / Zero-Contact (1 task)**: `reach-v3`. Contact force is strictly 0.00 N throughout.
 
-### 4.2 Multi-Task Benchmark Results
+### 4.2 Multi-Task Benchmark Results (Locked `MT50(seed=42)`)
 
-| Task Name | Interaction Regime | 12T Kin MLP | 12T Kin GRU | 12T Force GRU | Force Delta (vs Kin GRU) |
+*All tasks evaluated on 20 fixed episodes per model ($n=20$, evaluation seeds $42 + 17 \cdot i$, $i \in [0, 19]$). Brackets report 90% Wilson score confidence intervals for success rates, and 90% Wald confidence intervals for the paired delta.*
+
+| Task Name | Interaction Regime | 12T Kin MLP ($n=20$) | 12T Kin GRU ($n=20$) | 12T Force GRU ($n=20$) | Force Delta vs Kin GRU [90% CI] |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| `pick-place-v3` | **True Contact** | 15.0% | 0.0% | **45.0%** | **+45.0%** |
-| `pick-place-wall-v3` | **True Contact** | 55.0% | 0.0% | **75.0%** | **+75.0%** |
-| `sweep-into-v3` | **True Contact** | 100.0% | 100.0% | 90.0% | $-10.0\%$ |
-| `assembly-v3` | **True Contact** | 85.0% | 0.0% | 0.0% | $+0.0\%$ |
-| `hammer-v3` | Hardstop Mechanism | 95.0% | 60.0% | **90.0%** | **+30.0%** |
-| `button-press-topdown-v3`| Hardstop Mechanism | 100.0% | 65.0% | **100.0%** | **+35.0%** |
-| `door-open-v3` | Hardstop Mechanism | 100.0% | 100.0% | 100.0% | $+0.0\%$ |
-| `drawer-open-v3` | Hardstop Mechanism | 100.0% | 100.0% | 100.0% | $+0.0\%$ |
-| `drawer-close-v3` | Hardstop Mechanism | 100.0% | 100.0% | 100.0% | $+0.0\%$ |
-| `door-close-v3` | Hardstop Mechanism | 95.0% | 100.0% | 60.0% | $-40.0\%$ |
-| `peg-insert-side-v3` | Hardstop Mechanism | 90.0% | 5.0% | 0.0% | $-5.0\%$ |
-| `reach-v3` | Free-Space (0 N) | 65.0% | 20.0% | 25.0% | $+5.0\%$ |
+| `pick-place-v3` | **True Contact** | 45.0% [27.7, 63.7] | 5.0% [1.1, 19.6] | **25.0%** [12.7, 43.2] | **+20.0%** [+2.2%, +37.8%] |
+| `pick-place-wall-v3` | **True Contact** | 70.0% [51.6, 83.6] | 0.0% [0.0, 11.9] | **65.0%** [46.7, 79.8] | **+65.0%** [+47.5%, +82.5%] |
+| `sweep-into-v3` | **True Contact** | 95.0% [80.4, 98.9] | 95.0% [80.4, 98.9] | 75.0% [56.8, 87.3] | **-20.0%** [-37.8%, -2.2%] |
+| `assembly-v3` | **True Contact** | 65.0% [46.7, 79.8] | 0.0% [0.0, 11.9] | 0.0% [0.0, 11.9] | **+0.0%** [0.0%, 0.0%] |
+| `hammer-v3` | Hardstop Mechanism | 95.0% [80.4, 98.9] | 40.0% [24.2, 58.1] | **80.0%** [62.2, 90.7] | **+40.0%** [+16.7%, +63.3%] |
+| `button-press-topdown-v3`| Hardstop Mechanism | 100.0% [88.1, 100.0] | 55.0% [37.2, 71.6] | **100.0%** [88.1, 100.0] | **+45.0%** [+26.7%, +63.3%] |
+| `door-open-v3` | Hardstop Mechanism | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | **+0.0%** [0.0%, 0.0%] |
+| `drawer-open-v3` | Hardstop Mechanism | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | **+0.0%** [0.0%, 0.0%] |
+| `drawer-close-v3` | Hardstop Mechanism | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | 100.0% [88.1, 100.0] | **+0.0%** [0.0%, 0.0%] |
+| `door-close-v3` | Hardstop Mechanism | 95.0% [80.4, 98.9] | 100.0% [88.1, 100.0] | 90.0% [73.8, 96.6] | **-10.0%** [-21.0%, +1.0%] |
+| `peg-insert-side-v3` | Hardstop Mechanism | 75.0% [56.8, 87.3] | 0.0% [0.0, 11.9] | 5.0% [1.1, 19.6] | **+5.0%** [-3.0%, +13.0%] |
+| `reach-v3` | Free-Space (0 N) | 70.0% [51.6, 83.6] | 30.0% [16.4, 48.4] | 30.0% [16.4, 48.4] | **+0.0%** [-23.8%, +23.8%] |
 
 ### 4.3 Regime-Decomposed Summary
 
-| Regime Group | 12T Kinematic MLP | 12T Kinematic GRU | 12T Force GRU | Force Impact on GRU |
+| Regime Group | 12T Kinematic MLP | 12T Kinematic GRU | 12T Force GRU | Force Impact on GRU [90% CI] |
 | :--- | :---: | :---: | :---: | :---: |
-| **True Contact Tasks (4 tasks, 80 rollouts)** | 63.8% (51 / 80) | 25.0% (20 / 80) | **52.5% (42 / 80)** | **+27.5% (+110% relative)** |
-| **Hardstop Mechanism Tasks (7 tasks, 140 rollouts)** | 97.1% (136 / 140) | 75.7% (106 / 140) | **78.6% (110 / 140)** | **+2.9%** |
-| **Free-Space Tasks (1 task, 20 rollouts)** | 65.0% (13 / 20) | 20.0% (4 / 20) | **25.0% (5 / 20)** | **+5.0%** |
-| **Overall Benchmark (12 tasks, 240 rollouts)** | **83.3% (200 / 240)** | **54.2% (130 / 240)** | **65.4% (157 / 240)** | **+11.2%** |
+| **True Contact Tasks (4 tasks, 80 rollouts)** | 68.8% (55 / 80) [59.6, 76.6] | 25.0% (20 / 80) [17.9, 33.7] | **41.2% (33 / 80)** [32.6, 50.5] | **+16.2%** [+4.2%, +28.3%] |
+| **Hardstop Mechanism Tasks (7 tasks, 140 rollouts)** | 95.0% (133 / 140) [91.3, 97.2] | 70.7% (99 / 140) [64.0, 76.6] | **82.1% (115 / 140)** [76.2, 86.9] | **+11.4%** [+3.2%, +19.7%] |
+| **Free-Space Tasks (1 task, 20 rollouts)** | 70.0% (14 / 20) [51.6, 83.6] | 30.0% (6 / 20) [16.4, 48.4] | **30.0% (6 / 20)** [16.4, 48.4] | **+0.0%** [-23.8%, +23.8%] |
+| **Overall Benchmark (12 tasks, 240 rollouts)** | **84.2% (202 / 240)** [79.9, 87.7] | **52.1% (125 / 240)** [46.8, 57.3] | **64.2% (154 / 240)** [58.9, 69.1] | **+12.1%** [+4.7%, +19.4%] |
 
 ---
 
@@ -141,6 +144,11 @@ Meta-World's internal task generator `metaworld._make_tasks` initializes tasks u
 - **Phase 2 Baseline Decomposition (`task-1453.log`)**: Instantiated with unseeded `MT10()`. On that set, the 12 selected poses split into **4 Easy (#10, #24, #40, #47)** and **8 Hard (#00, #04, #07, #15, #20, #31, #35, #44)**.
 - **Phase 3 & Phase 4 Paired Benchmarks (`task-1778.log`, `task-3108.log`, `task-3170.log`)**: Instantiated with `MT10(seed=42)`. Passing `seed=42` regenerated task goals, producing a different sequence of coordinates that evaluated to **6 Easy (#04, #10, #15, #24, #35, #44)** and **6 Hard (#00, #07, #20, #31, #40, #47)**.
 - Both sets are internally consistent, 100% deterministic, and exhibit zero stochastic variance across random seeds. All comparisons between the baseline, weighted loss, kinematic GRU, and force GRU were conducted on the **exact same `MT10(seed=42)` locked set**.
+
+### 5.3 Methodological Note on Multi-Task Benchmark Task Seeding (`MT50(seed=None)` vs `MT50(seed=42)`)
+The earlier version of this report reflected an initial unseeded `MT50()` execution. In Meta-World, constructing `MT50()` with default `seed=None` causes internal task goal sampling (`_make_tasks`) to depend on ambient Python RNG state at process launch. While all 3 models were evaluated on the exact same task instances within that single run, point estimates exhibited sampling variance across separate process invocations (e.g., `door-close-v3` evaluated at 60%, 70%, 80%, and 90% across different unseeded process runs, though Kinematic GRU was 100% invariant across all runs).
+
+To ensure complete rigor and bitwise reproducibility matching the primary pick-place benchmark, the entire 12-task benchmark was completely re-executed with `metaworld.MT50(seed=42)` locked in advance across all three models (720 total rollouts, 240 rollouts per model, evaluation seeds $42 + 17 \cdot i$). The numbers reported in Section 4 are now permanently locked, reproducible down to individual episode steps, and reported with explicit 90% confidence intervals to avoid over-interpreting sample noise at $n=20$ episodes per task.
 
 ---
 
