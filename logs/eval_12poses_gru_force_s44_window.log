@@ -1,0 +1,76 @@
+================================================================================
+12-POSE PAIRED BENCHMARK (pick-place-v3): bc_12tasks_gru_force_s44 (method=window)
+================================================================================
+[POSE_EP] Ep 01/60 | Pose #00 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 02/60 | Pose #00 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 03/60 | Pose #00 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 04/60 | Pose #00 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 05/60 | Pose #00 | Seed 5000 | Success: True  | Steps: 500
+[POSE_EP] Ep 06/60 | Pose #04 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 07/60 | Pose #04 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 08/60 | Pose #04 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 09/60 | Pose #04 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 10/60 | Pose #04 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 11/60 | Pose #07 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 12/60 | Pose #07 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 13/60 | Pose #07 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 14/60 | Pose #07 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 15/60 | Pose #07 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 16/60 | Pose #10 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 17/60 | Pose #10 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 18/60 | Pose #10 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 19/60 | Pose #10 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 20/60 | Pose #10 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 21/60 | Pose #15 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 22/60 | Pose #15 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 23/60 | Pose #15 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 24/60 | Pose #15 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 25/60 | Pose #15 | Seed 5000 | Success: True  | Steps: 500
+[POSE_EP] Ep 26/60 | Pose #20 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 27/60 | Pose #20 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 28/60 | Pose #20 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 29/60 | Pose #20 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 30/60 | Pose #20 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 31/60 | Pose #24 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 32/60 | Pose #24 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 33/60 | Pose #24 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 34/60 | Pose #24 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 35/60 | Pose #24 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 36/60 | Pose #31 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 37/60 | Pose #31 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 38/60 | Pose #31 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 39/60 | Pose #31 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 40/60 | Pose #31 | Seed 5000 | Success: True  | Steps: 500
+[POSE_EP] Ep 41/60 | Pose #35 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 42/60 | Pose #35 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 43/60 | Pose #35 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 44/60 | Pose #35 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 45/60 | Pose #35 | Seed 5000 | Success: True  | Steps: 500
+[POSE_EP] Ep 46/60 | Pose #40 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 47/60 | Pose #40 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 48/60 | Pose #40 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 49/60 | Pose #40 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 50/60 | Pose #40 | Seed 5000 | Success: True  | Steps: 500
+[POSE_EP] Ep 51/60 | Pose #44 | Seed 1000 | Success: False | Steps: 500
+[POSE_EP] Ep 52/60 | Pose #44 | Seed 2026 | Success: False | Steps: 500
+[POSE_EP] Ep 53/60 | Pose #44 | Seed 3000 | Success: False | Steps: 500
+[POSE_EP] Ep 54/60 | Pose #44 | Seed 4000 | Success: False | Steps: 500
+[POSE_EP] Ep 55/60 | Pose #44 | Seed 5000 | Success: False | Steps: 500
+[POSE_EP] Ep 56/60 | Pose #47 | Seed 1000 | Success: True  | Steps: 500
+[POSE_EP] Ep 57/60 | Pose #47 | Seed 2026 | Success: True  | Steps: 500
+[POSE_EP] Ep 58/60 | Pose #47 | Seed 3000 | Success: True  | Steps: 500
+[POSE_EP] Ep 59/60 | Pose #47 | Seed 4000 | Success: True  | Steps: 500
+[POSE_EP] Ep 60/60 | Pose #47 | Seed 5000 | Success: True  | Steps: 500
+
+--------------------------------------------------------------------------------
+12-POSE BENCHMARK SUMMARY: bc_12tasks_gru_force_s44 (method=window)
+--------------------------------------------------------------------------------
+Elapsed Time: 256.6s
+Rollouts Succeeded: 30/60 (50.0%)
+Poses Solved (5/5 seeds): 6/12 (Indices: [0, 15, 31, 35, 40, 47])
+Poses Solved (>=1 seed):  6/12 (Indices: [0, 15, 31, 35, 40, 47])
+Pose Index Order: [0, 4, 7, 10, 15, 20, 24, 31, 35, 40, 44, 47]
+Per-Pose Success Counts (out of 5): [5, 0, 0, 0, 5, 0, 0, 5, 5, 5, 0, 5]
+Per-Pose Binary Solved (5/5):       [1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1]
+--------------------------------------------------------------------------------
+

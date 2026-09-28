@@ -1,0 +1,3072 @@
+{
+  "benchmark_12tasks_window": {
+    "Kin GRU s42": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 8,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 40.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 11,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 55.00000000000001
+        },
+        "assembly-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 18,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 90.0
+        },
+        "reach-v3": {
+          "success_count": 5,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 25.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        }
+      },
+      "total_succ": 202,
+      "total_episodes": 240,
+      "total_rate": 84.16666666666667
+    },
+    "Force GRU s42": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 10,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 50.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 18,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 90.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 16,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 80.0
+        },
+        "assembly-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "reach-v3": {
+          "success_count": 8,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 40.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        }
+      },
+      "total_succ": 212,
+      "total_episodes": 240,
+      "total_rate": 88.33333333333333
+    },
+    "Kin GRU s43": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 8,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 40.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 17,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 85.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 11,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 55.00000000000001
+        },
+        "assembly-v3": {
+          "success_count": 15,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 75.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "reach-v3": {
+          "success_count": 4,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 20.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 14,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 70.0
+        }
+      },
+      "total_succ": 189,
+      "total_episodes": 240,
+      "total_rate": 78.75
+    },
+    "Force GRU s43": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 5,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 25.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 17,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 85.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 11,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 55.00000000000001
+        },
+        "assembly-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 19,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 95.0
+        },
+        "reach-v3": {
+          "success_count": 4,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 20.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 18,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 90.0
+        }
+      },
+      "total_succ": 194,
+      "total_episodes": 240,
+      "total_rate": 80.83333333333333
+    },
+    "Kin GRU s44": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 8,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 40.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 19,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 95.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 8,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 40.0
+        },
+        "assembly-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 19,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 95.0
+        },
+        "reach-v3": {
+          "success_count": 4,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 20.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        }
+      },
+      "total_succ": 198,
+      "total_episodes": 240,
+      "total_rate": 82.5
+    },
+    "Force GRU s44": {
+      "task_results": {
+        "pick-place-v3": {
+          "success_count": 6,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "regime": "True Contact",
+          "success_rate": 30.0
+        },
+        "pick-place-wall-v3": {
+          "success_count": 17,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 85.0
+        },
+        "peg-insert-side-v3": {
+          "success_count": 16,
+          "episodes": 20,
+          "ep_vector": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 80.0
+        },
+        "assembly-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "hammer-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "sweep-into-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "True Contact",
+          "success_rate": 100.0
+        },
+        "reach-v3": {
+          "success_count": 6,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "regime": "Free-Space (0N)",
+          "success_rate": 30.0
+        },
+        "door-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-open-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "button-press-topdown-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "drawer-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        },
+        "door-close-v3": {
+          "success_count": 20,
+          "episodes": 20,
+          "ep_vector": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "regime": "Hardstop Hold",
+          "success_rate": 100.0
+        }
+      },
+      "total_succ": 205,
+      "total_episodes": 240,
+      "total_rate": 85.41666666666666
+    }
+  },
+  "benchmark_12poses_window": {
+    "Kin GRU s42": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        5,
+        0,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 25,
+      "total_rollouts": 60,
+      "pct_rollouts": 41.66666666666667,
+      "poses_solved_5of5": 5
+    },
+    "Force GRU s42": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        5,
+        0,
+        5,
+        5,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 35,
+      "total_rollouts": 60,
+      "pct_rollouts": 58.333333333333336,
+      "poses_solved_5of5": 7
+    },
+    "Kin GRU s43": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        5,
+        0,
+        5,
+        0,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 30,
+      "total_rollouts": 60,
+      "pct_rollouts": 50.0,
+      "poses_solved_5of5": 6
+    },
+    "Force GRU s43": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        5,
+        0,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 25,
+      "total_rollouts": 60,
+      "pct_rollouts": 41.66666666666667,
+      "poses_solved_5of5": 5
+    },
+    "Kin GRU s44": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        5,
+        5,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 30,
+      "total_rollouts": 60,
+      "pct_rollouts": 50.0,
+      "poses_solved_5of5": 6
+    },
+    "Force GRU s44": {
+      "pose_results": {
+        "0": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "7": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "10": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "24": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "31": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "35": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "40": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "successes": 0,
+          "repeats": 5,
+          "succ_vector": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "successes": 5,
+          "repeats": 5,
+          "succ_vector": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "counts_vector": [
+        5,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        5,
+        5,
+        5,
+        0,
+        5
+      ],
+      "binary_vector": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "total_succ_rollouts": 30,
+      "total_rollouts": 60,
+      "pct_rollouts": 50.0,
+      "poses_solved_5of5": 6
+    }
+  }
+}

@@ -1,0 +1,278 @@
+================================================================================
+12-TASK BENCHMARK MT50(seed=42): bc_12tasks_gru_force (method=window, 20 eps/task)
+================================================================================
+[TASK_EP] Ep 001/240 | Task: pick-place-v3            | EpSeed    42 | Success: False | Steps: 500
+[TASK_EP] Ep 002/240 | Task: pick-place-v3            | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 003/240 | Task: pick-place-v3            | EpSeed    76 | Success: False | Steps: 500
+[TASK_EP] Ep 004/240 | Task: pick-place-v3            | EpSeed    93 | Success: False | Steps: 500
+[TASK_EP] Ep 005/240 | Task: pick-place-v3            | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 006/240 | Task: pick-place-v3            | EpSeed   127 | Success: False | Steps: 500
+[TASK_EP] Ep 007/240 | Task: pick-place-v3            | EpSeed   144 | Success: False | Steps: 500
+[TASK_EP] Ep 008/240 | Task: pick-place-v3            | EpSeed   161 | Success: False | Steps: 500
+[TASK_EP] Ep 009/240 | Task: pick-place-v3            | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 010/240 | Task: pick-place-v3            | EpSeed   195 | Success: False | Steps: 500
+[TASK_EP] Ep 011/240 | Task: pick-place-v3            | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 012/240 | Task: pick-place-v3            | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 013/240 | Task: pick-place-v3            | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 014/240 | Task: pick-place-v3            | EpSeed   263 | Success: False | Steps: 500
+[TASK_EP] Ep 015/240 | Task: pick-place-v3            | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 016/240 | Task: pick-place-v3            | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 017/240 | Task: pick-place-v3            | EpSeed   314 | Success: False | Steps: 500
+[TASK_EP] Ep 018/240 | Task: pick-place-v3            | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 019/240 | Task: pick-place-v3            | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 020/240 | Task: pick-place-v3            | EpSeed   365 | Success: False | Steps: 500
+[TASK_EP] Ep 021/240 | Task: pick-place-wall-v3       | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 022/240 | Task: pick-place-wall-v3       | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 023/240 | Task: pick-place-wall-v3       | EpSeed    76 | Success: False | Steps: 500
+[TASK_EP] Ep 024/240 | Task: pick-place-wall-v3       | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 025/240 | Task: pick-place-wall-v3       | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 026/240 | Task: pick-place-wall-v3       | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 027/240 | Task: pick-place-wall-v3       | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 028/240 | Task: pick-place-wall-v3       | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 029/240 | Task: pick-place-wall-v3       | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 030/240 | Task: pick-place-wall-v3       | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 031/240 | Task: pick-place-wall-v3       | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 032/240 | Task: pick-place-wall-v3       | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 033/240 | Task: pick-place-wall-v3       | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 034/240 | Task: pick-place-wall-v3       | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 035/240 | Task: pick-place-wall-v3       | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 036/240 | Task: pick-place-wall-v3       | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 037/240 | Task: pick-place-wall-v3       | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 038/240 | Task: pick-place-wall-v3       | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 039/240 | Task: pick-place-wall-v3       | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 040/240 | Task: pick-place-wall-v3       | EpSeed   365 | Success: False | Steps: 500
+[TASK_EP] Ep 041/240 | Task: peg-insert-side-v3       | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 042/240 | Task: peg-insert-side-v3       | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 043/240 | Task: peg-insert-side-v3       | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 044/240 | Task: peg-insert-side-v3       | EpSeed    93 | Success: False | Steps: 500
+[TASK_EP] Ep 045/240 | Task: peg-insert-side-v3       | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 046/240 | Task: peg-insert-side-v3       | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 047/240 | Task: peg-insert-side-v3       | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 048/240 | Task: peg-insert-side-v3       | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 049/240 | Task: peg-insert-side-v3       | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 050/240 | Task: peg-insert-side-v3       | EpSeed   195 | Success: False | Steps: 500
+[TASK_EP] Ep 051/240 | Task: peg-insert-side-v3       | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 052/240 | Task: peg-insert-side-v3       | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 053/240 | Task: peg-insert-side-v3       | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 054/240 | Task: peg-insert-side-v3       | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 055/240 | Task: peg-insert-side-v3       | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 056/240 | Task: peg-insert-side-v3       | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 057/240 | Task: peg-insert-side-v3       | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 058/240 | Task: peg-insert-side-v3       | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 059/240 | Task: peg-insert-side-v3       | EpSeed   348 | Success: False | Steps: 500
+[TASK_EP] Ep 060/240 | Task: peg-insert-side-v3       | EpSeed   365 | Success: False | Steps: 500
+[TASK_EP] Ep 061/240 | Task: assembly-v3              | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 062/240 | Task: assembly-v3              | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 063/240 | Task: assembly-v3              | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 064/240 | Task: assembly-v3              | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 065/240 | Task: assembly-v3              | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 066/240 | Task: assembly-v3              | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 067/240 | Task: assembly-v3              | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 068/240 | Task: assembly-v3              | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 069/240 | Task: assembly-v3              | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 070/240 | Task: assembly-v3              | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 071/240 | Task: assembly-v3              | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 072/240 | Task: assembly-v3              | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 073/240 | Task: assembly-v3              | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 074/240 | Task: assembly-v3              | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 075/240 | Task: assembly-v3              | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 076/240 | Task: assembly-v3              | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 077/240 | Task: assembly-v3              | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 078/240 | Task: assembly-v3              | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 079/240 | Task: assembly-v3              | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 080/240 | Task: assembly-v3              | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 081/240 | Task: hammer-v3                | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 082/240 | Task: hammer-v3                | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 083/240 | Task: hammer-v3                | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 084/240 | Task: hammer-v3                | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 085/240 | Task: hammer-v3                | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 086/240 | Task: hammer-v3                | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 087/240 | Task: hammer-v3                | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 088/240 | Task: hammer-v3                | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 089/240 | Task: hammer-v3                | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 090/240 | Task: hammer-v3                | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 091/240 | Task: hammer-v3                | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 092/240 | Task: hammer-v3                | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 093/240 | Task: hammer-v3                | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 094/240 | Task: hammer-v3                | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 095/240 | Task: hammer-v3                | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 096/240 | Task: hammer-v3                | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 097/240 | Task: hammer-v3                | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 098/240 | Task: hammer-v3                | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 099/240 | Task: hammer-v3                | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 100/240 | Task: hammer-v3                | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 101/240 | Task: sweep-into-v3            | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 102/240 | Task: sweep-into-v3            | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 103/240 | Task: sweep-into-v3            | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 104/240 | Task: sweep-into-v3            | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 105/240 | Task: sweep-into-v3            | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 106/240 | Task: sweep-into-v3            | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 107/240 | Task: sweep-into-v3            | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 108/240 | Task: sweep-into-v3            | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 109/240 | Task: sweep-into-v3            | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 110/240 | Task: sweep-into-v3            | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 111/240 | Task: sweep-into-v3            | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 112/240 | Task: sweep-into-v3            | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 113/240 | Task: sweep-into-v3            | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 114/240 | Task: sweep-into-v3            | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 115/240 | Task: sweep-into-v3            | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 116/240 | Task: sweep-into-v3            | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 117/240 | Task: sweep-into-v3            | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 118/240 | Task: sweep-into-v3            | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 119/240 | Task: sweep-into-v3            | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 120/240 | Task: sweep-into-v3            | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 121/240 | Task: reach-v3                 | EpSeed    42 | Success: False | Steps: 500
+[TASK_EP] Ep 122/240 | Task: reach-v3                 | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 123/240 | Task: reach-v3                 | EpSeed    76 | Success: False | Steps: 500
+[TASK_EP] Ep 124/240 | Task: reach-v3                 | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 125/240 | Task: reach-v3                 | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 126/240 | Task: reach-v3                 | EpSeed   127 | Success: False | Steps: 500
+[TASK_EP] Ep 127/240 | Task: reach-v3                 | EpSeed   144 | Success: False | Steps: 500
+[TASK_EP] Ep 128/240 | Task: reach-v3                 | EpSeed   161 | Success: False | Steps: 500
+[TASK_EP] Ep 129/240 | Task: reach-v3                 | EpSeed   178 | Success: False | Steps: 500
+[TASK_EP] Ep 130/240 | Task: reach-v3                 | EpSeed   195 | Success: False | Steps: 500
+[TASK_EP] Ep 131/240 | Task: reach-v3                 | EpSeed   212 | Success: False | Steps: 500
+[TASK_EP] Ep 132/240 | Task: reach-v3                 | EpSeed   229 | Success: False | Steps: 500
+[TASK_EP] Ep 133/240 | Task: reach-v3                 | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 134/240 | Task: reach-v3                 | EpSeed   263 | Success: False | Steps: 500
+[TASK_EP] Ep 135/240 | Task: reach-v3                 | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 136/240 | Task: reach-v3                 | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 137/240 | Task: reach-v3                 | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 138/240 | Task: reach-v3                 | EpSeed   331 | Success: False | Steps: 500
+[TASK_EP] Ep 139/240 | Task: reach-v3                 | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 140/240 | Task: reach-v3                 | EpSeed   365 | Success: False | Steps: 500
+[TASK_EP] Ep 141/240 | Task: door-open-v3             | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 142/240 | Task: door-open-v3             | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 143/240 | Task: door-open-v3             | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 144/240 | Task: door-open-v3             | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 145/240 | Task: door-open-v3             | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 146/240 | Task: door-open-v3             | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 147/240 | Task: door-open-v3             | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 148/240 | Task: door-open-v3             | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 149/240 | Task: door-open-v3             | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 150/240 | Task: door-open-v3             | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 151/240 | Task: door-open-v3             | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 152/240 | Task: door-open-v3             | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 153/240 | Task: door-open-v3             | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 154/240 | Task: door-open-v3             | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 155/240 | Task: door-open-v3             | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 156/240 | Task: door-open-v3             | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 157/240 | Task: door-open-v3             | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 158/240 | Task: door-open-v3             | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 159/240 | Task: door-open-v3             | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 160/240 | Task: door-open-v3             | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 161/240 | Task: drawer-open-v3           | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 162/240 | Task: drawer-open-v3           | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 163/240 | Task: drawer-open-v3           | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 164/240 | Task: drawer-open-v3           | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 165/240 | Task: drawer-open-v3           | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 166/240 | Task: drawer-open-v3           | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 167/240 | Task: drawer-open-v3           | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 168/240 | Task: drawer-open-v3           | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 169/240 | Task: drawer-open-v3           | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 170/240 | Task: drawer-open-v3           | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 171/240 | Task: drawer-open-v3           | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 172/240 | Task: drawer-open-v3           | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 173/240 | Task: drawer-open-v3           | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 174/240 | Task: drawer-open-v3           | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 175/240 | Task: drawer-open-v3           | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 176/240 | Task: drawer-open-v3           | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 177/240 | Task: drawer-open-v3           | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 178/240 | Task: drawer-open-v3           | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 179/240 | Task: drawer-open-v3           | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 180/240 | Task: drawer-open-v3           | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 181/240 | Task: button-press-topdown-v3  | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 182/240 | Task: button-press-topdown-v3  | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 183/240 | Task: button-press-topdown-v3  | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 184/240 | Task: button-press-topdown-v3  | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 185/240 | Task: button-press-topdown-v3  | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 186/240 | Task: button-press-topdown-v3  | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 187/240 | Task: button-press-topdown-v3  | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 188/240 | Task: button-press-topdown-v3  | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 189/240 | Task: button-press-topdown-v3  | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 190/240 | Task: button-press-topdown-v3  | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 191/240 | Task: button-press-topdown-v3  | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 192/240 | Task: button-press-topdown-v3  | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 193/240 | Task: button-press-topdown-v3  | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 194/240 | Task: button-press-topdown-v3  | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 195/240 | Task: button-press-topdown-v3  | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 196/240 | Task: button-press-topdown-v3  | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 197/240 | Task: button-press-topdown-v3  | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 198/240 | Task: button-press-topdown-v3  | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 199/240 | Task: button-press-topdown-v3  | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 200/240 | Task: button-press-topdown-v3  | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 201/240 | Task: drawer-close-v3          | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 202/240 | Task: drawer-close-v3          | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 203/240 | Task: drawer-close-v3          | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 204/240 | Task: drawer-close-v3          | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 205/240 | Task: drawer-close-v3          | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 206/240 | Task: drawer-close-v3          | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 207/240 | Task: drawer-close-v3          | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 208/240 | Task: drawer-close-v3          | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 209/240 | Task: drawer-close-v3          | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 210/240 | Task: drawer-close-v3          | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 211/240 | Task: drawer-close-v3          | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 212/240 | Task: drawer-close-v3          | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 213/240 | Task: drawer-close-v3          | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 214/240 | Task: drawer-close-v3          | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 215/240 | Task: drawer-close-v3          | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 216/240 | Task: drawer-close-v3          | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 217/240 | Task: drawer-close-v3          | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 218/240 | Task: drawer-close-v3          | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 219/240 | Task: drawer-close-v3          | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 220/240 | Task: drawer-close-v3          | EpSeed   365 | Success: True  | Steps: 500
+[TASK_EP] Ep 221/240 | Task: door-close-v3            | EpSeed    42 | Success: True  | Steps: 500
+[TASK_EP] Ep 222/240 | Task: door-close-v3            | EpSeed    59 | Success: True  | Steps: 500
+[TASK_EP] Ep 223/240 | Task: door-close-v3            | EpSeed    76 | Success: True  | Steps: 500
+[TASK_EP] Ep 224/240 | Task: door-close-v3            | EpSeed    93 | Success: True  | Steps: 500
+[TASK_EP] Ep 225/240 | Task: door-close-v3            | EpSeed   110 | Success: True  | Steps: 500
+[TASK_EP] Ep 226/240 | Task: door-close-v3            | EpSeed   127 | Success: True  | Steps: 500
+[TASK_EP] Ep 227/240 | Task: door-close-v3            | EpSeed   144 | Success: True  | Steps: 500
+[TASK_EP] Ep 228/240 | Task: door-close-v3            | EpSeed   161 | Success: True  | Steps: 500
+[TASK_EP] Ep 229/240 | Task: door-close-v3            | EpSeed   178 | Success: True  | Steps: 500
+[TASK_EP] Ep 230/240 | Task: door-close-v3            | EpSeed   195 | Success: True  | Steps: 500
+[TASK_EP] Ep 231/240 | Task: door-close-v3            | EpSeed   212 | Success: True  | Steps: 500
+[TASK_EP] Ep 232/240 | Task: door-close-v3            | EpSeed   229 | Success: True  | Steps: 500
+[TASK_EP] Ep 233/240 | Task: door-close-v3            | EpSeed   246 | Success: True  | Steps: 500
+[TASK_EP] Ep 234/240 | Task: door-close-v3            | EpSeed   263 | Success: True  | Steps: 500
+[TASK_EP] Ep 235/240 | Task: door-close-v3            | EpSeed   280 | Success: True  | Steps: 500
+[TASK_EP] Ep 236/240 | Task: door-close-v3            | EpSeed   297 | Success: True  | Steps: 500
+[TASK_EP] Ep 237/240 | Task: door-close-v3            | EpSeed   314 | Success: True  | Steps: 500
+[TASK_EP] Ep 238/240 | Task: door-close-v3            | EpSeed   331 | Success: True  | Steps: 500
+[TASK_EP] Ep 239/240 | Task: door-close-v3            | EpSeed   348 | Success: True  | Steps: 500
+[TASK_EP] Ep 240/240 | Task: door-close-v3            | EpSeed   365 | Success: True  | Steps: 500
+
+================================================================================
+12-TASK BENCHMARK SUMMARY: bc_12tasks_gru_force (method=window)
+================================================================================
++-------------------------+-----------------+-----------+------------+
+| Task                    | Regime          | Success   | Rate (%)   |
++=========================+=================+===========+============+
+| pick-place-v3           | True Contact    | 10/20     | 50.0%      |
++-------------------------+-----------------+-----------+------------+
+| pick-place-wall-v3      | True Contact    | 18/20     | 90.0%      |
++-------------------------+-----------------+-----------+------------+
+| peg-insert-side-v3      | Hardstop Hold   | 16/20     | 80.0%      |
++-------------------------+-----------------+-----------+------------+
+| assembly-v3             | True Contact    | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| hammer-v3               | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| sweep-into-v3           | True Contact    | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| reach-v3                | Free-Space (0N) | 8/20      | 40.0%      |
++-------------------------+-----------------+-----------+------------+
+| door-open-v3            | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| drawer-open-v3          | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| button-press-topdown-v3 | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| drawer-close-v3         | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| door-close-v3           | Hardstop Hold   | 20/20     | 100.0%     |
++-------------------------+-----------------+-----------+------------+
+| TOTAL                   | --              | 212/240   | 88.3%      |
++-------------------------+-----------------+-----------+------------+
+Elapsed Time: 782.1s
+
