@@ -1,0 +1,17 @@
+{
+  "model_name": "bc_12tasks_mlp_force",
+  "arch_type": "mlp",
+  "feature_key": "obs_force",
+  "obs_dim": 45,
+  "act_dim": 4,
+  "hidden_dim": 256,
+  "history_len": 1,
+  "param_count": 112260,
+  "epochs": 20,
+  "best_epoch": 19,
+  "best_val_loss": 0.6915680590797039,
+  "best_val_mae": 0.18315559605189732,
+  "test_loss": 3.2372442692567907,
+  "test_mae": 0.2760502615571022,
+  "total_time_seconds": 201.0711796283722
+}

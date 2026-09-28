@@ -1,0 +1,1538 @@
+{
+  "pick-place-v3": {
+    "successes": 5,
+    "episodes": 20,
+    "success_rate": 25.0,
+    "mean_reward": 657.4784193764858,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": false,
+        "rew": 5.13
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": false,
+        "rew": 3.56
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": false,
+        "rew": 5.06
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": false,
+        "rew": 5.21
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": false,
+        "rew": 9.23
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": false,
+        "rew": 7.49
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": false,
+        "rew": 5.67
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": false,
+        "rew": 11.24
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3280.34
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": false,
+        "rew": 3.99
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": false,
+        "rew": 188.48
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 3229.7
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 421.21
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": false,
+        "rew": 64.11
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": false,
+        "rew": 3.98
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": false,
+        "rew": 1.54
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": false,
+        "rew": 8.38
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 3520.13
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 2369.73
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": false,
+        "rew": 5.39
+      }
+    ]
+  },
+  "pick-place-wall-v3": {
+    "successes": 13,
+    "episodes": 20,
+    "success_rate": 65.0,
+    "mean_reward": 2627.0693266367693,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 4406.31
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": false,
+        "rew": 0.0
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": false,
+        "rew": 122.37
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4275.79
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": false,
+        "rew": 0.0
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 3816.55
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 4098.22
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": false,
+        "rew": 2604.82
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3406.92
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 3840.73
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 457.06
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": false,
+        "rew": 79.12
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 4443.64
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 3835.12
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 4197.58
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": false,
+        "rew": 0.0
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 4056.56
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 3736.4
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 2700.88
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": false,
+        "rew": 2463.3
+      }
+    ]
+  },
+  "peg-insert-side-v3": {
+    "successes": 19,
+    "episodes": 20,
+    "success_rate": 95.0,
+    "mean_reward": 3302.15466452162,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 3931.9
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 4053.56
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 4296.39
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 1412.81
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 3557.39
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 4245.99
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 1686.62
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 4222.95
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3356.47
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 3619.66
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 3130.59
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4095.86
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 3048.1
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 3806.72
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 3204.42
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 3313.0
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 3355.67
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 3252.38
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": false,
+        "rew": 1166.29
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 3286.31
+      }
+    ]
+  },
+  "assembly-v3": {
+    "successes": 15,
+    "episodes": 20,
+    "success_rate": 75.0,
+    "mean_reward": 3354.6868691208547,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 4328.79
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 4350.87
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 3011.96
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4313.16
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": false,
+        "rew": 413.01
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 4305.02
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 4314.09
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 4297.68
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 4320.48
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 4290.63
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 4313.2
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4317.54
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": false,
+        "rew": 977.35
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4310.73
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": false,
+        "rew": 915.22
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 4341.82
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": false,
+        "rew": 446.41
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 4310.15
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": false,
+        "rew": 898.48
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 4317.16
+      }
+    ]
+  },
+  "hammer-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 2409.2231992542747,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 3502.54
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 2843.93
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 3776.61
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 2862.65
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 1670.1
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 1990.5
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 2714.14
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 3062.22
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3748.35
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 1526.84
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 1498.98
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 1533.04
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 1986.35
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 2416.78
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 1863.58
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 2386.0
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 2068.17
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 1592.46
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 2192.59
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 2948.64
+      }
+    ]
+  },
+  "sweep-into-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 1784.8863158996635,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 1078.53
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 1065.73
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 4569.13
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 1039.15
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 4500.85
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 942.2
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 933.18
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 984.78
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 1104.92
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 1114.01
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 4564.94
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 1084.15
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 2064.82
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4555.8
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 1006.24
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 951.29
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 1044.25
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 1041.74
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 962.42
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 1089.61
+      }
+    ]
+  },
+  "reach-v3": {
+    "successes": 13,
+    "episodes": 20,
+    "success_rate": 65.0,
+    "mean_reward": 3764.600363096242,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 3782.0
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 4839.47
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": false,
+        "rew": 3130.63
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4498.63
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 4826.63
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": false,
+        "rew": 3079.27
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": false,
+        "rew": 451.85
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 2290.89
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3835.61
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 1922.68
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": false,
+        "rew": 3958.67
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4690.96
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": false,
+        "rew": 3885.71
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4662.02
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 4093.05
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 4811.93
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": false,
+        "rew": 2676.72
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": false,
+        "rew": 4215.06
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 4867.83
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 4772.4
+      }
+    ]
+  },
+  "door-open-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 4463.394050993083,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 4409.08
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 4502.03
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 4442.17
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4437.18
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 4510.22
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 4464.26
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 4469.95
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 4505.0
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 4446.99
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 4494.87
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 4529.53
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4474.13
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 4430.77
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4519.7
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 4431.69
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 4443.07
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 4499.62
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 4436.18
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 4426.71
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 4394.72
+      }
+    ]
+  },
+  "drawer-open-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 3975.761335325001,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 4088.25
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 3963.65
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 3920.17
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 3960.38
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 3930.93
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 3980.33
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 3965.99
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 3970.04
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3968.4
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 3984.21
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 3968.03
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 3962.0
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 4006.4
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4023.32
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 3966.6
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 3972.4
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 3966.56
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 4034.17
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 3913.9
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 3969.47
+      }
+    ]
+  },
+  "button-press-topdown-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 3733.7425141436447,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 3854.35
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 3856.24
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 3796.24
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 3883.37
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 3198.51
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 3847.71
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 3862.57
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 3794.23
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 3879.34
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 3851.17
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 3870.66
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 3844.24
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 3867.38
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 3871.33
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 3211.53
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 3318.46
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 3843.28
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 3333.87
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 3857.86
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 3832.51
+      }
+    ]
+  },
+  "drawer-close-v3": {
+    "successes": 20,
+    "episodes": 20,
+    "success_rate": 100.0,
+    "mean_reward": 4257.048043696021,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 4252.6
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 4299.66
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 4249.45
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4241.47
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 4243.46
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 4251.29
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 4251.82
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 4231.66
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 4273.79
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 4282.25
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 4241.41
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4231.97
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 4296.29
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4231.84
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 4231.27
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": true,
+        "rew": 4288.54
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": true,
+        "rew": 4237.44
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 4292.6
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 4230.96
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 4281.19
+      }
+    ]
+  },
+  "door-close-v3": {
+    "successes": 18,
+    "episodes": 20,
+    "success_rate": 90.0,
+    "mean_reward": 3543.844451319489,
+    "episode_details": [
+      {
+        "ep": 0,
+        "seed": 42,
+        "succ": true,
+        "rew": 1651.68
+      },
+      {
+        "ep": 1,
+        "seed": 59,
+        "succ": true,
+        "rew": 2479.43
+      },
+      {
+        "ep": 2,
+        "seed": 76,
+        "succ": true,
+        "rew": 4280.2
+      },
+      {
+        "ep": 3,
+        "seed": 93,
+        "succ": true,
+        "rew": 4381.53
+      },
+      {
+        "ep": 4,
+        "seed": 110,
+        "succ": true,
+        "rew": 4489.46
+      },
+      {
+        "ep": 5,
+        "seed": 127,
+        "succ": true,
+        "rew": 4410.22
+      },
+      {
+        "ep": 6,
+        "seed": 144,
+        "succ": true,
+        "rew": 2649.57
+      },
+      {
+        "ep": 7,
+        "seed": 161,
+        "succ": true,
+        "rew": 2218.91
+      },
+      {
+        "ep": 8,
+        "seed": 178,
+        "succ": true,
+        "rew": 4360.1
+      },
+      {
+        "ep": 9,
+        "seed": 195,
+        "succ": true,
+        "rew": 2000.52
+      },
+      {
+        "ep": 10,
+        "seed": 212,
+        "succ": true,
+        "rew": 4077.49
+      },
+      {
+        "ep": 11,
+        "seed": 229,
+        "succ": true,
+        "rew": 4479.89
+      },
+      {
+        "ep": 12,
+        "seed": 246,
+        "succ": true,
+        "rew": 4407.74
+      },
+      {
+        "ep": 13,
+        "seed": 263,
+        "succ": true,
+        "rew": 4203.65
+      },
+      {
+        "ep": 14,
+        "seed": 280,
+        "succ": true,
+        "rew": 4390.84
+      },
+      {
+        "ep": 15,
+        "seed": 297,
+        "succ": false,
+        "rew": 3091.94
+      },
+      {
+        "ep": 16,
+        "seed": 314,
+        "succ": false,
+        "rew": 2756.86
+      },
+      {
+        "ep": 17,
+        "seed": 331,
+        "succ": true,
+        "rew": 4090.38
+      },
+      {
+        "ep": 18,
+        "seed": 348,
+        "succ": true,
+        "rew": 2706.9
+      },
+      {
+        "ep": 19,
+        "seed": 365,
+        "succ": true,
+        "rew": 3749.59
+      }
+    ]
+  }
+}

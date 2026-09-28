@@ -421,7 +421,7 @@ def run_training(
 
 def main():
     parser = argparse.ArgumentParser(description="Train 12-task imitation learning models.")
-    parser.add_argument("--model", type=str, default="all", choices=["mlp", "gru_kinematic", "gru_force", "all"],
+    parser.add_argument("--model", type=str, default="all", choices=["mlp", "gru_kinematic", "gru_force", "mlp_force", "all"],
                         help="Which model variant to train.")
     parser.add_argument("--epochs", type=int, default=20, help="Training epochs (default: 20).")
     parser.add_argument("--batch-size", type=int, default=512, help="Batch size (default: 512).")
@@ -436,6 +436,11 @@ def main():
             "model_name": "bc_12tasks_mlp_kinematic",
             "arch_type": "mlp",
             "feature_key": "obs",
+        },
+        "mlp_force": {
+            "model_name": "bc_12tasks_mlp_force",
+            "arch_type": "mlp",
+            "feature_key": "obs_force",
         },
         "gru_kinematic": {
             "model_name": "bc_12tasks_gru_kinematic",
