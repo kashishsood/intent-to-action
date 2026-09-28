@@ -1,0 +1,39 @@
+================================================================================
+PEG-INSERT UNUSED CONFIG BENCHMARK: Kin GRU s42 (arch=gru, method=window)
+================================================================================
+[PEG_EP] Config #20 (01/30) | Seed   382 | Success: False | Steps: 500
+[PEG_EP] Config #21 (02/30) | Seed   399 | Success: False | Steps: 500
+[PEG_EP] Config #22 (03/30) | Seed   416 | Success: False | Steps: 500
+[PEG_EP] Config #23 (04/30) | Seed   433 | Success: False | Steps: 500
+[PEG_EP] Config #24 (05/30) | Seed   450 | Success: False | Steps: 500
+[PEG_EP] Config #25 (06/30) | Seed   467 | Success: False | Steps: 500
+[PEG_EP] Config #26 (07/30) | Seed   484 | Success: False | Steps: 500
+[PEG_EP] Config #27 (08/30) | Seed   501 | Success: False | Steps: 500
+[PEG_EP] Config #28 (09/30) | Seed   518 | Success: False | Steps: 500
+[PEG_EP] Config #29 (10/30) | Seed   535 | Success: False | Steps: 500
+[PEG_EP] Config #30 (11/30) | Seed   552 | Success: False | Steps: 500
+[PEG_EP] Config #31 (12/30) | Seed   569 | Success: False | Steps: 500
+[PEG_EP] Config #32 (13/30) | Seed   586 | Success: False | Steps: 500
+[PEG_EP] Config #33 (14/30) | Seed   603 | Success: False | Steps: 500
+[PEG_EP] Config #34 (15/30) | Seed   620 | Success: False | Steps: 500
+[PEG_EP] Config #35 (16/30) | Seed   637 | Success: False | Steps: 500
+[PEG_EP] Config #36 (17/30) | Seed   654 | Success: False | Steps: 500
+[PEG_EP] Config #37 (18/30) | Seed   671 | Success: False | Steps: 500
+[PEG_EP] Config #38 (19/30) | Seed   688 | Success: False | Steps: 500
+[PEG_EP] Config #39 (20/30) | Seed   705 | Success: False | Steps: 500
+[PEG_EP] Config #40 (21/30) | Seed   722 | Success: False | Steps: 500
+[PEG_EP] Config #41 (22/30) | Seed   739 | Success: False | Steps: 500
+[PEG_EP] Config #42 (23/30) | Seed   756 | Success: False | Steps: 500
+[PEG_EP] Config #43 (24/30) | Seed   773 | Success: False | Steps: 500
+[PEG_EP] Config #44 (25/30) | Seed   790 | Success: False | Steps: 500
+[PEG_EP] Config #45 (26/30) | Seed   807 | Success: False | Steps: 500
+[PEG_EP] Config #46 (27/30) | Seed   824 | Success: False | Steps: 500
+[PEG_EP] Config #47 (28/30) | Seed   841 | Success: False | Steps: 500
+[PEG_EP] Config #48 (29/30) | Seed   858 | Success: False | Steps: 500
+[PEG_EP] Config #49 (30/30) | Seed   875 | Success: False | Steps: 500
+
+SUMMARY: Kin GRU s42
+  Success: 0/30 (0.0%)
+  Vector:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  Elapsed: 61.6s
+--------------------------------------------------------------------------------
