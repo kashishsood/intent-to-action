@@ -122,9 +122,9 @@ All models were evaluated across 12 Meta-World tasks with 20 fixed episodes per 
 | Task Name | Interaction Regime | Kin s42 | Force s42 | Kin s43 | Force s43 | Kin s44 | Force s44 | Mean Kin | Mean Force | Mean Δ |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | `pick-place-v3` | **True Contact** | 8/20 | 10/20 | 8/20 | 5/20 | 8/20 | 6/20 | **8.0/20 (40.0%)** | **7.0/20 (35.0%)** | **-1.0 (-5.0%)** |
-| `pick-place-wall-v3` | **True Contact** | 20/20 | 18/20 | 16/20 | 17/20 | 19/20 | 17/20 | **18.3/20 (91.7%)** | **17.3/20 (86.7%)** | **-1.0 (-5.0%)** |
-| `peg-insert-side-v3` | Hardstop Hold | 11/20 | 16/20 | 9/20 | 10/20 | 8/20 | 14/20 | 9.3/20 (46.7%) | 13.3/20 (66.7%) | +4.0 (+20.0%) |
-| `assembly-v3` | **True Contact** | 20/20 | 20/20 | 14/20 | 20/20 | 20/20 | 20/20 | 18.0/20 (90.0%) | 20.0/20 (100.0%) | +2.0 (+10.0%) |
+| `pick-place-wall-v3` | **True Contact** | 20/20 | 18/20 | 17/20 | 17/20 | 19/20 | 17/20 | **18.7/20 (93.3%)** | **17.3/20 (86.7%)** | **-1.3 (-6.7%)** |
+| `peg-insert-side-v3` | Hardstop Hold | 11/20 | 16/20 | 11/20 | 11/20 | 8/20 | 16/20 | 10.0/20 (50.0%) | 14.3/20 (71.7%) | +4.3 (+21.7%) |
+| `assembly-v3` | **True Contact** | 20/20 | 20/20 | 15/20 | 20/20 | 20/20 | 20/20 | 18.3/20 (91.7%) | 20.0/20 (100.0%) | +1.7 (+8.3%) |
 | `hammer-v3` | Hardstop Hold | 20/20 | 20/20 | 20/20 | 20/20 | 20/20 | 20/20 | 20.0/20 (100.0%)| 20.0/20 (100.0%) | +0.0 (0.0%) |
 | `sweep-into-v3` | **True Contact** | 18/20 | 20/20 | 20/20 | 19/20 | 19/20 | 20/20 | 19.0/20 (95.0%) | 19.7/20 (98.3%) | +0.7 (+3.3%) |
 | `reach-v3` | Free-Space (0 N) | 5/20 | 8/20 | 4/20 | 4/20 | 4/20 | 6/20 | 4.3/20 (21.7%) | 6.0/20 (30.0%) | +1.7 (+8.3%) |
@@ -140,7 +140,7 @@ All models were evaluated across 12 Meta-World tasks with 20 fixed episodes per 
 - **Hypothesis Stated in Advance**: *"The mean Force−Kin difference across three seeds is within $\pm 10$ episodes of 240, using reach-v3 as the noise yardstick."*
 - **Outcome**:
   - The mean Force minus Kinematic difference across all 12 tasks is **+7.33 episodes out of 240** (+3.1%), which strictly satisfies the pre-stated bound ($\le \pm 10$ episodes).
-  - On `reach-v3`—a completely free-space task where contact forces are strictly 0.00 N and provide zero task information—the mean Force minus Kinematic difference was **+1.67 episodes**. Random initialization noise on a single 0 N task accounts for nearly a quarter of the entire aggregate difference across the 12 tasks.
+  - On `reach-v3`—a completely free-space task where contact forces are strictly 0.00 N and provide zero task information—the mean Force minus Kinematic difference was **+1.67 episodes**.
 
 ---
 
