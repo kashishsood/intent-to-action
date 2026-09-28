@@ -36,6 +36,8 @@ flagged-gaps analysis and experimental findings.
 > 
 > When re-evaluated under `method=window` (sliding 8-step buffer with $h_0 = 0$ at each step, matching training), the previously reported pick-place improvement (+10.0pp) **does not replicate**. Under matched window inference, GRU achieves **16.0% (8/50)** on `pick-place-v3` ($\Delta = -6.0$ pp relative to MLP's 22.0%), and step-wise inference degrades performance across tasks (e.g., button-press falls to 78%).
 > 
+> Notably, `button-press-topdown-v3` dropped from 100% (window) to 78% (step) under the same GRU checkpoint, illustrating the bug's cost even on tasks otherwise at ceiling.
+> 
 > **Conclusion**: The old hypothesis that temporal context compensates for compounding positional drift near the contact boundary is overturned. Temporal context provides no benefit over feedforward imitation on `pick-place-v3`. See [`eval_report.md`](eval_report.md) for full details.
 
 ---

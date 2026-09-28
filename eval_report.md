@@ -24,6 +24,8 @@
 > | `drawer-open-v3` | 100.0% (50/50) | 100.0% (50/50) | +0.0pp | 100.0% (50/50) | +0.0pp |
 > | `button-press-topdown-v3` | 100.0% (50/50) | 100.0% (50/50) | +0.0pp | 78.0% (39/50) | -22.0pp |
 > 
+> Notably, `button-press-topdown-v3` dropped from 100% (window) to 78% (step) under the same GRU checkpoint, illustrating the bug's cost even on tasks otherwise at ceiling.
+> 
 > **Conclusion**: The original conclusion that temporal context provides a mechanism to overcome compounding error on contact-rich manipulation tasks is overturned. Under matched evaluation, temporal context provides no benefit over feedforward imitation ($\Delta = -6.0$ pp on pick-place).
 
 ---
