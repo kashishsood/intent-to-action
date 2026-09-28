@@ -8,6 +8,26 @@
 
 ---
 
+> [!WARNING]
+> ### Erratum: GRU Train/Eval Protocol Mismatch and Window Re-evaluation
+> An audit of `train_bc_gru.py` and `compare_models.py` revealed that the original GRU evaluation suffered from a train/eval protocol mismatch: training was conducted on 8-step slices with zero-initialized hidden states ($h_0 = 0$), whereas `compare_models.py` evaluated closed loop via `model.step()`, carrying the hidden state indefinitely across all 500 rollout steps.
+> 
+> When re-evaluated under `method=window` (sliding 8-step buffer with $h_0 = 0$ at each step, matching the training sequence distribution), the previously reported GRU improvement on `pick-place-v3` (+10.0pp, 22.0% → 32.0%) **does not replicate**. Under matched window inference, GRU achieves **16.0% (8/50)** on `pick-place-v3` ($\Delta = -6.0$ pp relative to MLP's 22.0%).
+> 
+> **Re-evaluated 5-Task Benchmark (50 episodes/task, seed=2026):**
+> 
+> | Task | MLP Baseline | GRU (`method=window`) | Window $\Delta$ | GRU (`method=step`) | Step $\Delta$ |
+> | :--- | :---: | :---: | :---: | :---: | :---: |
+> | `reach-v3` | 62.0% (31/50) | 58.0% (29/50) | -4.0pp | 40.0% (20/50) | -22.0pp |
+> | `pick-place-v3` | 22.0% (11/50) | 16.0% (8/50) | -6.0pp | 10.0% (5/50) | -12.0pp |
+> | `door-open-v3` | 100.0% (50/50) | 100.0% (50/50) | +0.0pp | 100.0% (50/50) | +0.0pp |
+> | `drawer-open-v3` | 100.0% (50/50) | 100.0% (50/50) | +0.0pp | 100.0% (50/50) | +0.0pp |
+> | `button-press-topdown-v3` | 100.0% (50/50) | 100.0% (50/50) | +0.0pp | 78.0% (39/50) | -22.0pp |
+> 
+> **Conclusion**: The original conclusion that temporal context provides a mechanism to overcome compounding error on contact-rich manipulation tasks is overturned. Under matched evaluation, temporal context provides no benefit over feedforward imitation ($\Delta = -6.0$ pp on pick-place).
+
+---
+
 ## 1. Unified Benchmark: Step-Wise Accuracy vs. Task Success
 
 This table directly pairs offline imitation accuracy on the held-out test split with active closed-loop rollout success rates in the Meta-World simulation:

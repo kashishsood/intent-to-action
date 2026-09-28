@@ -30,6 +30,16 @@ flagged-gaps analysis and experimental findings.
 
 ---
 
+> [!WARNING]
+> ### Erratum: GRU Train/Eval Protocol Mismatch & Re-evaluation (`method=window`)
+> An audit revealed that the original GRU evaluation in `compare_models.py` suffered from a recurrent train/eval protocol mismatch: training was conducted on 8-step slices with zero-initialized hidden states ($h_0 = 0$), but closed-loop rollouts carried the hidden state for 500 steps via `model.step()`.
+> 
+> When re-evaluated under `method=window` (sliding 8-step buffer with $h_0 = 0$ at each step, matching training), the previously reported pick-place improvement (+10.0pp) **does not replicate**. Under matched window inference, GRU achieves **16.0% (8/50)** on `pick-place-v3` ($\Delta = -6.0$ pp relative to MLP's 22.0%), and step-wise inference degrades performance across tasks (e.g., button-press falls to 78%).
+> 
+> **Conclusion**: The old hypothesis that temporal context compensates for compounding positional drift near the contact boundary is overturned. Temporal context provides no benefit over feedforward imitation on `pick-place-v3`. See [`eval_report.md`](eval_report.md) for full details.
+
+---
+
 ## Phase 2–3: Pose-Difficulty Decomposition & Weighted-Loss Experiment
 
 To move beyond speculative explanations of the 22.0% baseline success rate on `pick-place-v3`, an experimental pipeline was executed across controlled phases:

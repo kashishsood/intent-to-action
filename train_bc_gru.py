@@ -297,6 +297,8 @@ def main():
 
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
+    if device.type == "cpu":
+        torch.set_num_threads(8)
 
     print(f"\n{'='*60}")
     print(f"  GRU BEHAVIOR CLONING — history_len={args.history_len}")
