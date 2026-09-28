@@ -1,9 +1,14 @@
 # Force-Augmented Observation Study: Closing the Imitation-to-Success Gap in Contact Manipulation
 
 **Project**: Intent-to-Action / REVEL Thesis Evaluation  
-**Status**: Completed & Verified  
+**Status**: UNDER REVISION: GRU columns invalid (train/eval protocol mismatch)  
 **Date**: September 2026  
 **Artifact Directory**: `models/`, `dataset_12tasks/`  
+
+> [!CAUTION]
+> **ERRATA NOTICE (September 2026)**:  
+> All GRU evaluation columns (both Kinematic GRU and Force GRU) reported below were generated using `method=step` (continuous carryover of the recurrent hidden state $h_t$ across 500 closed-loop environment steps). In training, policies were trained strictly on short sequence slices ($H=8$) initialized with zero hidden state ($h_0 = 0$). This profound train/eval mismatch caused severe out-of-distribution recurrent state drift in evaluation, causing an apparent "collapse" in Kinematic GRU.  
+> When evaluated under `method=window` matching training conditions ($H=8$ sliding window, $h_0 = 0$), Kinematic GRU achieves **41.7%–50.0%** on the 12-pose benchmark and **84.2%** on the 12-task benchmark. Across matched seeds, Force GRU is within $\pm 2$ poses of Kinematic GRU, and the previously reported "force rescue" and "physical anchor" effects were artifacts of the evaluation protocol mismatch.
 
 ---
 
