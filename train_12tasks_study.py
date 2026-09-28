@@ -426,6 +426,8 @@ def main():
     parser.add_argument("--epochs", type=int, default=20, help="Training epochs (default: 20).")
     parser.add_argument("--batch-size", type=int, default=512, help="Batch size (default: 512).")
     parser.add_argument("--threads", type=int, default=14, help="PyTorch CPU threads.")
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for training (default: 42).")
+    parser.add_argument("--output-name", type=str, default="", help="Custom output model name.")
     args = parser.parse_args()
 
     torch.set_num_threads(args.threads)
@@ -459,12 +461,14 @@ def main():
     all_metrics = {}
     for m in models_to_train:
         cfg = configs[m]
+        out_name = args.output_name if args.output_name else cfg["model_name"]
         res = run_training(
-            model_name=cfg["model_name"],
+            model_name=out_name,
             arch_type=cfg["arch_type"],
             feature_key=cfg["feature_key"],
             epochs=args.epochs,
             batch_size=args.batch_size,
+            seed=args.seed,
         )
         all_metrics[m] = res
 
